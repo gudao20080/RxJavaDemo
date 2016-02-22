@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.wk.materialdemo.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/a"
+                />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:minHeight="?attr/actionBarSize"
+                app:logo="@mipmap/ic_launcher"
+                app:subtitle="SubTitle"
+                app:subtitleTextColor="@android:color/holo_red_dark"
+                app:title="Title"
+                app:titleTextColor="@android:color/holo_green_light"
+                app:layout_collapseMode="parallax"
+                android:background="@color/colorPrimary"
+                app:collapseIcon="@mipmap/b"
+                />
+
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+       <!-- <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="myText"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            />-->
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main"/>
+    <fragment
+    android:id="@+id/frag_a"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    class="com.wk.materialdemo.AFragment"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    />
+
+   <!-- <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />-->
+</android.support.design.widget.CoordinatorLayout>

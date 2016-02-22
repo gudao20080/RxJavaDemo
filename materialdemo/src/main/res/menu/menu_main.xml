@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single"
+        >
+
+        <item
+
+            android:id="@+id/setting"
+            android:title="Setting"
+            app:showAsAction="never"/>
+
+        <item
+
+            android:id="@+id/setting1"
+            android:title="Setting1"
+            app:showAsAction="never"/>
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        >
+
+        <item
+
+            android:id="@+id/setting2"
+            android:title="Setting2"
+            app:showAsAction="never"/>
+
+        <item
+
+            android:id="@+id/setting3"
+            android:title="Setting3"
+            app:showAsAction="never"/>
+    </group>
+</menu>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wk.myapplication.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/btn_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="go"/>
+
+        <Button
+            android:id="@+id/btn_do_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/btn_do_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/btn_do_behavior_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="behaviorSubject"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/btn_do_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="range"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/btn_do_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="interval"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/btn_do_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="filter"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/btn_do_take"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="take"
+            android:textAllCaps="false"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_go"
+        />
+</LinearLayout>

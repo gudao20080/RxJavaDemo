@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_mode"
+        android:title="Action Mode"/>
+    <item
+        android:id="@+id/action_mode1"
+        android:title="Action Mode1"/>
+    <item
+        android:id="@+id/action_mode2"
+        android:title="Action Mode2"/>
+</menu>
