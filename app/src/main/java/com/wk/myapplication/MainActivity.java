@@ -1,6 +1,7 @@
 package com.wk.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -30,6 +31,7 @@ import rx.Subscription;
 import rx.functions.Action0;
 import rx.functions.Action1;
 import rx.functions.Func1;
+import rx.observables.GroupedObservable;
 import rx.schedulers.Schedulers;
 import rx.subjects.AsyncSubject;
 import rx.subjects.BehaviorSubject;
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        SharedPreferences.Editor edit = getSharedPreferences("", MODE_PRIVATE).edit();
     }
 
     @OnClick(R.id.btn_do_from)
@@ -285,6 +288,42 @@ public class MainActivity extends AppCompatActivity {
                     Log.d(TAG, "call: " + integer);
                 }
             });
+    }
+
+    @OnClick(R.id.btn_do_first)
+    public void doFirst() {                    //只发射第一个
+        Integer[] nums = {1, 2, 3, 4, 5};
+        Observable.from(nums)
+//            .take(3)
+            .takeLast(3)
+            .takeFirst(new Func1<Integer, Boolean>() {
+                @Override
+                public Boolean call(Integer integer) {
+                    Log.d(TAG, "Func1 call: " + integer);
+                    return true;
+                }
+            })
+            .subscribe(new Action1<Integer>() {
+                @Override
+                public void call(Integer integer) {
+                    Log.d(TAG, "Action1 call: " + integer);
+                }
+            });
+
+        Observable<GroupedObservable<String, Integer>> observable = Observable.from(nums)
+            .groupBy(new Func1<Integer, String>() {
+                @Override
+                public String call(Integer integer) {
+                    return null;
+                }
+            });
+
+        Schedulers.io().createWorker().schedule(new Action0() {
+            @Override
+            public void call() {
+
+            }
+        });
     }
 
     public void setImageView(final ImageView iv) {

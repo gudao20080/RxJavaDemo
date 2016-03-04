@@ -119,7 +119,6 @@ public class AFragment extends Fragment {
     @Override
     public void onPrepareOptionsMenu(Menu menu) {
         MenuItem item = menu.findItem(R.id.a_exit);
-        item.setTitle("heheh");
         super.onPrepareOptionsMenu(menu);
     }
 

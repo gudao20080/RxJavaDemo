@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/materialdemo/materialdemo.iml" filepath="$PROJECT_DIR$/materialdemo/materialdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucropdemo/ucropdemo.iml" filepath="$PROJECT_DIR$/ucropdemo/ucropdemo.iml" />
     </modules>
   </component>
 </project>
